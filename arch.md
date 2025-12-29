@@ -116,20 +116,22 @@ Input (URL or Text)
        │
        ▼
 ┌──────────────┐
-│  URL Check   │ ──► Is Document? ──► Download ──► Extract Text
-└──────────────┘
-       │ No
-       ▼
-  Web Scraping ──► Parse HTML ───────────────────┐
-                                                 │
-                                                 ▼
-                                          Validate Limits
-                                                 │
-                                                 ▼
-                                          Summarize (OpenAI)
-                                                 │
-                                                 ▼
-                                          Store & Cache
+│  URL Check   │ ──► Is Document? ──► Yes ──► Download ──► Extract Text
+└──────────────┘                                           (LangChain)
+       │                                                         │
+       │ No                                                      │
+       ▼                                                         │
+  Web Scraping ──► Parse HTML ────────────────────────────────── ┤
+  (Spider CLI)     (BeautifulSoup)                               │
+                                                                 │
+                                                                 ▼
+                                                          Validate Limits
+                                                                 │
+                                                                 ▼
+                                                          Summarize (OpenAI)
+                                                                 │
+                                                                 ▼
+                                                          Store & Cache
 ```
 
 ### 5. Validation
