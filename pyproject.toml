@@ -1,0 +1,24 @@
+[project]
+name = "piyush-app"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "scalar-fastapi",
+    "asyncpg",
+    "pydantic",
+    "python-dotenv",
+    "beautifulsoup4",
+    "requests",
+    "openai",
+    "redis",
+    "langchain",
+    "langchain-community",
+    "unstructured[pdf]",
+    "unstructured[docx]",
+    "unstructured[pptx]",
+    "unstructured[xlsx]",
+    "pikepdf",
+    "pillow",
+]
